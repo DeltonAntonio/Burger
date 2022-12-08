@@ -1,0 +1,271 @@
+@import '_variables.scss';
+@import '_background.scss';
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#principal{
+    width: 100%;
+   padding-top: 1rem;
+   height: 100vh;
+   @include Background("hambuguer.jpg");
+   
+   
+}
+#header{
+    padding: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    list-style: none;
+    li{
+        margin: 1rem;
+    }
+    a{
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 1.2rem;
+        &:hover{
+            color: $danger-color;
+        }
+    }
+
+}
+#Logo{
+    font-size: 3.5rem;
+    color: $danger-color;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#banner-text{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    h2{
+        font-size: 3.2rem;
+        color: $primary-color;
+    }
+    a{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $danger-color;
+       
+        .btn{
+            width: 200px;
+            padding: 10px;
+            margin: auto;
+            transition-property: background-color, color, border-radius;
+            transition-duration: 300ms;
+            transition-delay: 500ms;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+ 
+#toogle-icon{
+        display: none;
+        width: 100px;
+        height: 50px;
+        background-image: url('../images/menu.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    #desapeare
+    {   
+        display: none;
+    } 
+    #list{
+        display: none;
+        position: relative;
+        width:300px;
+        height: 0;
+        margin: auto;
+        background-color: black;
+        transition-property: all;
+        transition-duration: 300ms;
+        li{
+            padding: .3rem;
+        }
+    }
+
+#banner-menu{
+    padding-top: 1rem;
+    width: 100%;
+    background-color: rgb(206, 2, 2);
+    #menu-items{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        img{
+            width: 300px;
+        }
+        h3{
+            color: rgb(134, 5, 5);
+            font-size: 1.5rem;
+        }
+        h4{
+            color: $primary-color;
+            font-size: 1.2rem;
+        }
+    }
+      
+}
+h2{
+    text-align: center;
+    color: $primary-color;
+    font-size: 2.5rem;
+}
+#banner-test{
+    background-color: rgb(235, 179, 39);
+    padding-top: 1rem;
+    padding-bottom: 20px ;
+    #test-items{
+        width: 80%;
+        
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+       .card {
+            background-color: $primary-color;
+            box-shadow: 0px 0px 5px 1px rgb(255, 255, 255);
+            border-radius: 30px;
+            margin-bottom: 20px;
+            width: 300px;
+            .card-header{
+                display: flex;
+                padding: 1rem;
+                .info{
+                    padding-left: 2rem;
+                }
+
+            }
+            .card-body{
+                text-align: center;
+            }
+       }
+    }
+}
+#banner-contact{
+    background-color: rgb(186, 252, 87);
+    padding-top: 1rem;
+    #div-contact{
+        width: 80%;
+        margin: auto;
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            input[type="text"]{
+                margin-bottom: 20px;
+                width: 80%;
+                height: 30px;
+                padding-left: 20px;
+            }
+            input[type="email"]{
+                margin-bottom: 20px;
+                width: 80%;
+                height: 30px;
+                padding-left: 20px;
+            }
+            input[type="tel"]{
+                margin-bottom: 20px;
+                width: 80%;
+                height: 30px;
+                padding-left: 20px;
+            }
+            textarea{
+                padding-left: 20px;
+                width: 80%;
+                height: 100px;
+                margin-bottom: 20px;
+            }
+            input[type="submit"]{
+                width: 100px;
+                height: 30px;
+                background-color: rgb(7, 212, 7);
+                color: $primary-color;
+                border: none;
+                margin-bottom: 20px;
+                &:hover{
+                    cursor: pointer;
+                    background-color: rgb(6, 189, 6);
+                }
+            }
+        }
+    }
+}
+footer{
+    background-color: $secondary-color;
+    color: $primary-color;
+    text-align: center;
+    padding: 50px;
+}
+@media screen and (max-width:720px){
+   #principal{
+    padding-bottom: 300px;
+   }
+    ul{
+        display: none;
+   }
+   #header{
+    
+    justify-content: space-between;
+    
+   }
+   #toogle-icon{
+    position: relative;
+    left: 40px;
+    top: 50px;
+    display: block;
+   }
+   #list{
+    display: none;
+   }
+   #desapeare
+    {
+        display: block;
+    } 
+   
+        
+}
+#loading{
+    width: 100%;
+    display: flex ;
+    justify-content: center;
+}
+@media screen and (max-height: 500px){
+    #principal{
+        padding-bottom: 500px;
+    }
+    ul{
+        display: none;
+   }
+   #toogle-icon{
+    display: block;
+   }
+   #list{
+    display: none;
+   }
+   #desapeare
+    {
+        display: block;
+    } 
+}
